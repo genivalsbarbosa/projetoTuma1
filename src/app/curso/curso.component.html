@@ -1,18 +1,56 @@
 <app-layout>
     <div class="card">
         <div class="card-body">
-          <h5 class="card-title">Curso</h5>  
+          <h5 class="card-title">Curso</h5> 
+          <!--Linha formulario--> 
           <div class="row">
             <div class="form-group col-12">
               <label for="nome"class="control-label">Nome:</label>
               <input type="text" class="form-control" [(ngModel)]="curso.nome"  />
             </div>            
           </div>
+          <!--Linha botao pesquisar--> 
           <div class="row" style="margin-bottom: 20px;">
             <div class="col-12">
               <button type="button" class="btn btn-primary" (click)="pesquisar()" >Pesquisar</button>
             </div>
           </div> 
+
+          <!--Linha tabela--> 
+          <div class="row">
+            <div class="col-lg-12">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>Codigo</th>
+                    <th>Nome</th>
+                    <th>Instrutor</th>
+                    <th>Local</th>
+                    <th>Carga Horaria</th>
+                    <th>Data Inicio</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let curso of listaCurso">
+                    <th>{{curso.codigo}}</th>
+                    <td>{{curso.nome}}</td>
+                    <td>{{curso.instrutor}}</td>
+                    <td>{{curso.local}}</td>
+                    <td>{{curso.cargaHoraria}}</td>
+                    <td>{{curso.dataInicio | date: 'dd/MM/yyyy' }}</td>
+                  </tr>                  
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!--Linha botao incluir--> 
+          <div class="row" style="margin-bottom: 20px;">
+            <div class="col-lg-12">
+              <button type="button" class="btn btn-primary" style="margin-right: 10px;" (click)="incluir()">Incluir</button>              
+            </div>
+          </div>
+
         </div>
     </div>
 </app-layout>
