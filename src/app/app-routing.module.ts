@@ -20,6 +20,11 @@ const routes: Routes = [
     path: 'curso/incluir',
     component: CursomanterComponent,
     pathMatch: 'full'
+  },
+  {
+    path: 'curso/alterar/:id', 
+    component: CursomanterComponent,
+    pathMatch: 'full'
   }
 ];
 

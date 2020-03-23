@@ -12,6 +12,7 @@ export class CursoComponent implements OnInit {
 
 
   curso: Curso = new Curso();
+  selecionado: Curso;
 
   listaCurso: Curso[] = [];
 
@@ -38,6 +39,24 @@ export class CursoComponent implements OnInit {
 
   incluir(){
     this.router.navigate(['/curso/incluir']);
+  }
+
+  selecionar(valor){
+    this.selecionado = valor;    
+  }
+
+  remover(){
+
+    this.cursoServico.remover(this.selecionado).subscribe(
+      data => {
+        alert(data['mensagem']);
+      }
+    );
+    
+  }
+
+  alterar(){    
+    this.router.navigate(['/curso/alterar/'+this.selecionado.nome]);
   }
 
 }
