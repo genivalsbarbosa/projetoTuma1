@@ -12,6 +12,8 @@ import { CursoService } from './curso/servico/curso.service';
 import { CursomanterComponent } from './curso/cursomanter/cursomanter.component';
 import { AlunoComponent } from './aluno/aluno.component';
 import { AlunoManterComponent } from './aluno/aluno-manter/aluno-manter.component';
+import { MatriculaComponent } from './matricula/matricula.component';
+import { MatriculaManterComponent } from './matricula/matricula-manter/matricula-manter.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { AlunoManterComponent } from './aluno/aluno-manter/aluno-manter.componen
     AlunoComponent,
     LayoutComponent,
     CursomanterComponent,
-    AlunoManterComponent
+    AlunoManterComponent,
+    MatriculaComponent,    
+    MatriculaManterComponent
   ],
   imports: [
     BrowserModule,
