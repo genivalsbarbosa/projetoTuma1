@@ -10,14 +10,18 @@ import { CursoComponent } from './curso/curso.component';
 import { LayoutComponent } from './layout/layout.component';
 import { CursoService } from './curso/servico/curso.service';
 import { CursomanterComponent } from './curso/cursomanter/cursomanter.component';
+import { AlunoComponent } from './aluno/aluno.component';
+import { AlunoManterComponent } from './aluno/aluno-manter/aluno-manter.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     CursoComponent,
+    AlunoComponent,
     LayoutComponent,
-    CursomanterComponent
+    CursomanterComponent,
+    AlunoManterComponent
   ],
   imports: [
     BrowserModule,
